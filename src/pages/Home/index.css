@@ -1,0 +1,9 @@
+button {
+  border: 1px solid red;
+}
+
+.bg {
+  background: url('@/asset/aa.png');
+  width: 200px;
+  height: 200px;
+}

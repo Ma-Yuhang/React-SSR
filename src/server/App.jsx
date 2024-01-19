@@ -1,7 +1,11 @@
 import React from 'react'
-import Home from '@/pages/Home';
-export default function App() {
+import RouteApp from '@/routes/RouteApp';
+import { StaticRouter } from 'react-router-dom';
+
+export default function App({location ,context}) {
   return (
-    <Home />
+    <StaticRouter location={location} context={context}>
+      <RouteApp />
+    </StaticRouter>
   )
 }
