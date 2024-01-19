@@ -3,6 +3,7 @@
   \***************************************************************************************************************************/
 body {
   background-color: palegreen;
+  margin: 0;
 }
 
 /*!*******************************************************************************************************************************!*\
@@ -17,5 +18,21 @@ button {
   width: 200px;
   height: 200px;
 }
+/*!**************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/css-loader@6.9.1_webpack@5.89.0/node_modules/css-loader/dist/cjs.js!./src/components/Header/index.css ***!
+  \**************************************************************************************************************************************/
+.header-containter {
+  background-color: #333;
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  display: flex;
+}
 
-/*# sourceMappingURL=bundle.f9fb5.css.map*/
+.header-containter a{
+  color: inherit;
+  text-decoration: none;
+  margin-left: 50px;
+}
+
+/*# sourceMappingURL=bundle.1a3cc.css.map*/
