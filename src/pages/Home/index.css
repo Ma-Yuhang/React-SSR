@@ -3,7 +3,7 @@ button {
 }
 
 .bg {
-  background: url('@/asset/aa.png');
+  background: url('@/asset/abc.png');
   width: 200px;
   height: 200px;
 }

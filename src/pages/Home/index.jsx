@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './index.css'
-import pngUrl from '@/asset/aa.png'
+import pngUrl from '@/asset/abc.png'
 
 export default function Home() {
   const [n, setN] = useState(0)
