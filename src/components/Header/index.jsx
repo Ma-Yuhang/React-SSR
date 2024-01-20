@@ -6,6 +6,7 @@ export default function Header() {
     <div className='header-containter'>
       <Link to='/'>首页</Link>
       <Link to='/movies'>电影列表</Link>
+      <Link to='/admin'>后台管理</Link>
     </div>
   )
 }
