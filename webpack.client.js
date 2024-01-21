@@ -32,7 +32,12 @@ const clientConfig = {
     new MiniCssExtractPlugin({
       filename: 'css/bundle.[chunkhash:5].css'
     })
-  ]
+  ],
+  optimization: {
+    splitChunks: {
+      chunks: 'all', // 代码分割 自动提取公共模块代码
+    },
+  },
 };
 
 module.exports = merge(baseConfig, clientConfig);

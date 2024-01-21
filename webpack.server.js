@@ -1,6 +1,5 @@
 const nodeExternals = require('webpack-node-externals');
 const { merge } = require('webpack-merge');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const baseConfig = require('./webpack.base');
 
 const serverConfig = {

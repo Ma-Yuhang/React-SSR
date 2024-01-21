@@ -1,11 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/server';
 import getHtml from './getHtml';
-import App from '@/App';
+import App from './App';
+import loadData from './loadData';
+import createStore from '@/store';
 
-export default function (req, res) {
-  const context = {}
-  const componentHTML = ReactDOM.renderToString(<App location={req.path} context={context} />);
-  const html = getHtml(componentHTML)
+
+export default async function (req, res) {
+  const store = createStore()
+
+  await loadData(req.path, store)
+  const componentHTML = ReactDOM.renderToString(
+    <App location={req.path} store={store} />
+  );
+  const html = getHtml(componentHTML, req.path, store)
   res.send(html);
 }

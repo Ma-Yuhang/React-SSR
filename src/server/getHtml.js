@@ -1,9 +1,7 @@
 import getScripts from './getScripts';
 import getLinks from './getLinks';
-import { getMovies } from '@/api';
 
-
-export default function (componentHTML) {
+export default function (componentHTML, path, store) {
   return `<!DOCTYPE html>
   <html lang="en">
   <head>
@@ -14,6 +12,10 @@ export default function (componentHTML) {
   </head>
   <body>
     <div id="root">${componentHTML}</div>
+    <script>
+      window.pageDatas = ${JSON.stringify(store.getState())}
+      window.requestPath = '${path}'
+    </script>
     ${getScripts()}
   </body>
   </html>`;
